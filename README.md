@@ -6,6 +6,12 @@
 
 检测引擎、哈希、阈值、组件匹配与报告序列化使用 C++；Kotlin/Java 负责 Ruru Compose 界面、系统 API 桥接与报告导出。UI 源码来自所提供的 Ruru 工程，保留其卡片、图标、主题与动画。
 
+## 关联研究仓库
+
+[PrismSUN-Reverse](https://github.com/BestPVPNa1Xue/PrismSUN-Reverse) 保存检测逻辑的逆向报告、原始证据和 C++ 语义重建。对应本应用 v1.2.0 的研究快照是 [research-2026-10-18-r1](https://github.com/BestPVPNa1Xue/PrismSUN-Reverse/tree/research-2026-10-18-r1)，完整数据库、样本与归档见其 [Release](https://github.com/BestPVPNa1Xue/PrismSUN-Reverse/releases/tag/research-2026-10-18-r1)。
+
+研究仓库记录已证逻辑、剩余缺口及验证边界；本仓库维护 Android 采集集成、检测应用与 Ruru UI。KeyMapper 分类、Minecraft 包体积/证书基准和北京时间校对中的应用新增规则，不能直接等同于原 Prism 已证明的规则。研究重建不代表原始 Prism 源码或全部检测覆盖。
+
 ## 界面与使用
 
 打开应用自动检测，点卡片展开详情。“关于”提供仓库链接、重新检测、设置和报告导出。
