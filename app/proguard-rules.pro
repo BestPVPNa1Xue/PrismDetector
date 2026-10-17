@@ -1,0 +1,4 @@
+-keep class na1xue.prism.detector.NativeBridge { *; }
+-keep class na1xue.prism.detector.Platform { *; }
+-keep class na1xue.prism.detector.Platform$PackageData { *; }
+-keepclasseswithmembernames class * { native <methods>; }

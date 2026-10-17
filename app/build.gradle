@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+}
+android {
+    namespace 'na1xue.prism.detector'
+    compileSdk 36
+    ndkVersion '27.0.12077973'
+    defaultConfig {
+        applicationId 'na1xue.prism.detector'
+        minSdk 24
+        targetSdk 35
+        versionCode 3
+        versionName '1.2.0'
+        ndk { abiFilters.addAll((project.findProperty('prismAbis') ?: 'arm64-v8a,x86_64').split(',')) }
+        externalNativeBuild { cmake { cppFlags '-std=c++17'; arguments '-DANDROID_STL=c++_static' } }
+    }
+    signingConfigs {
+        localDevelopment {
+            storeFile rootProject.file('.signing/prismdetector-dev.p12')
+            storePassword 'android'
+            keyAlias 'prismdetector'
+            keyPassword 'android'
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.localDevelopment
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug { signingConfig signingConfigs.localDevelopment }
+    }
+    buildFeatures { compose true; buildConfig true }
+    composeOptions { kotlinCompilerExtensionVersion '1.5.14' }
+    externalNativeBuild { cmake { path 'src/main/cpp/CMakeLists.txt'; version '3.22.1' } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_11; targetCompatibility JavaVersion.VERSION_11 }
+    kotlinOptions { jvmTarget = '11' }
+}
+// Original Ruru UI/runtime versions; compiler updated for the local build toolchain.
+dependencies {
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.activity:activity-compose:1.5.1'
+    implementation 'androidx.compose.material:material-icons-extended:1.2.1'
+    implementation 'androidx.compose.material3:material3:1.0.0-alpha16'
+    implementation 'androidx.compose.ui:ui:1.2.1'
+    implementation 'androidx.compose.ui:ui-tooling-preview:1.2.1'
+    implementation 'com.google.android.material:material:1.6.1'
+}

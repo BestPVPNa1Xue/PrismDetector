@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ruru</string>
+    <string name="about">About</string>
+    <string name="authored">Authored by</string>
+    <string name="source">Source link</string>
+    <string name="telegram">Telegram channel</string>
+    <string name="not_found">Not Found</string>
+    <string name="found">Found</string>
+    <string name="method">Method unavailable</string>
+    <string name="suspicious">Suspicious</string>
+    <string name="abnormal">Abnormal Environment</string>
+    <string name="filedet">File Detection</string>
+    <string name="pmc">PM Command</string>
+    <string name="pmca">PM Conventional APIs</string>
+    <string name="pmsa">PM Sundry APIs</string>
+    <string name="pmiq">PM Intent Queries</string>
+    <string name="xposed">Xposed Modules</string>
+    <string name="lspatch">LSPatch App</string>
+    <string name="magisk">Magisk App</string>
+    <string name="account">Account</string>
+    <string name="accessibility">Accessibility Services</string>
+     <string-array name="settingprops">
+        <item>Setting Props</item>
+        <item>Development mode is ENABLED</item>
+        <item>Debugging mode is enabled</item>
+        <item>Vpn Connected</item>
+    </string-array>
+</resources>
